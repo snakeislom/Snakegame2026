@@ -6,17 +6,15 @@ source.dir = .
 source.include_exts = py,png,jpg,wav,kv,atlas
 version = 0.1
 
-# MUHIM: Agar o'yiningiz Pygame bo'lsa, shunday qoldiring. 
-# Agar Kivy bo'lsa, pygame o'rniga kivy deb yozing.
+# Pydroid 3 da ishlatilgan kutubxonalar:
 requirements = python3,pygame
 
 orientation = landscape
 fullscreen = 1
 android.archs = arm64-v8a, armeabi-v7a
 
-# Pygame uchun maxsus sozlamalar
+# Pygame o'yinlari uchun p4a sozlamasi (source_dir-siz!)
 p4a.branch = master
-p4a.source_dir = 
 entrypoint = new.py
 
 [buildozer]
