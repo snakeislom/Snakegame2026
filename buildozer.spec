@@ -15,7 +15,7 @@ android.archs = arm64-v8a, armeabi-v7a
 
 # Pygame o'yinlari uchun p4a sozlamasi (source_dir-siz!)
 p4a.branch = master
-entrypoint = new.py
+entrypoint = main.py
 
 [buildozer]
 log_level = 2
