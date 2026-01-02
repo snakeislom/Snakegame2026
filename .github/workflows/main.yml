@@ -10,8 +10,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Buildozer Action
-        uses: ArtemSerebrennikov/buildozer-action@v1
+        uses: akshayaurora/buildozer-action@master
         with:
           workdir: .
-          buildozer_version: master
           
