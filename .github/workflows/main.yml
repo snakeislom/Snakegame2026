@@ -31,10 +31,11 @@ jobs:
 
       - name: Build with Buildozer
         run: |
-          # Litsenziyalarni avtomatik qabul qilishning eng xavfsiz yo'li
+          # Litsenziyalarni oldindan qabul qilish
           mkdir -p ~/.android
           touch ~/.android/repositories.cfg
-          buildozer android debug
+          # Buildozer-ni ishga tushirish (litsenziyalarni avtomatik tasdiqlash bilan)
+          yes | buildozer android debug
         
       - name: Upload APK
         uses: actions/upload-artifact@v4
