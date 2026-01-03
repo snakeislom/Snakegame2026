@@ -31,10 +31,9 @@ jobs:
 
       - name: Build with Buildozer
         run: |
-          # Litsenziyalarni oldindan qabul qilish
           mkdir -p ~/.android
           touch ~/.android/repositories.cfg
-          # Buildozer-ni ishga tushirish (litsenziyalarni avtomatik tasdiqlash bilan)
+          # Litsenziyalarni avtomatik "ha" deb o'tkazish
           yes | buildozer android debug
         
       - name: Upload APK
