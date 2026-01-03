@@ -31,10 +31,10 @@ jobs:
 
       - name: Build with Buildozer
         run: |
-          mkdir -p ~/.android
-          touch ~/.android/repositories.cfg
-          # Litsenziyalarni avtomatik "ha" deb o'tkazish
-          yes | buildozer android debug
+          # Litsenziyalarni avtomatik tasdiqlash uchun muhit o'zgaruvchisi
+          export APP_ACCEPT_SDK_LICENSE=1
+          # To'g'ridan-to'g'ri build qilish
+          buildozer android debug
         
       - name: Upload APK
         uses: actions/upload-artifact@v4
