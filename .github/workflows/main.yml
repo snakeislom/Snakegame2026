@@ -1,8 +1,5 @@
 name: Build APK
-on:
-  push:
-    branches: [ main ]
-  workflow_dispatch:
+on: [push, workflow_dispatch]
 
 jobs:
   build:
@@ -30,12 +27,7 @@ jobs:
         run: pip install buildozer cython==0.29.33
 
       - name: Build with Buildozer
-        run: |
-          # Litsenziyalarni oldindan qabul qilib qo'yish
-          mkdir -p ~/.android
-          touch ~/.android/repositories.cfg
-          # "yes" buyrug'isiz, lekin avtomatik tasdiqlash bilan
-          buildozer android debug
+        run: buildozer android debug
         env:
           APP_ACCEPT_SDK_LICENSE: "1"
         
